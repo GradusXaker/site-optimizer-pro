@@ -78,20 +78,113 @@ Comprehensive WordPress optimization solution: image compression, database optim
 
 ## 🔧 Installation
 
-### Automatic Installation
-1. Download the plugin archive
-2. In WordPress admin, go to **Plugins → Add New**
-3. Click **Upload Plugin** and select the archive
-4. Activate the plugin
+### Method 1: Install via ZIP (Recommended)
 
-### Manual Installation
-1. Upload `site-optimizer` folder to `/wp-content/plugins/`
-2. Activate the plugin in **Plugins** menu
+1. **Download the plugin:**
+   - Click: https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
+   - Save the file to your computer
 
-### Via WP-CLI
+2. **Upload to WordPress:**
+   - Log in to your WordPress admin panel
+   - Go to **Plugins → Add New Plugin**
+   - Click the **"Upload Plugin"** button at the top
+   - Click **"Choose File"** and select the downloaded ZIP file
+   - Click **"Install Now"**
+
+3. **Activate:**
+   - After installation, click **"Activate Plugin"**
+   - The plugin is now ready to use!
+
+---
+
+### Method 2: Install via Git
+
+1. **Connect to your server via SSH**
+
+2. **Navigate to plugins directory:**
+   ```bash
+   cd /path/to/your/wordpress/wp-content/plugins/
+   ```
+
+3. **Clone the repository:**
+   ```bash
+   git clone https://github.com/GradusXaker/site-optimizer-pro.git site-optimizer
+   ```
+
+4. **Activate in WordPress:**
+   - Go to **Plugins** in WordPress admin
+   - Find **"Site Optimizer Pro"** in the list
+   - Click **"Activate"**
+
+---
+
+### Method 3: Manual Installation (FTP)
+
+1. **Download the plugin:**
+   - Download: https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
+   - Extract the ZIP file on your computer
+   - You'll get a folder named `site-optimizer-pro-main`
+   - Rename it to `site-optimizer`
+
+2. **Upload via FTP:**
+   - Connect to your server using FTP client (FileZilla, Cyberduck, etc.)
+   - Navigate to `/wp-content/plugins/` directory
+   - Upload the `site-optimizer` folder
+
+3. **Activate:**
+   - Go to **Plugins** in WordPress admin
+   - Find **"Site Optimizer Pro"**
+   - Click **"Activate"**
+
+---
+
+### Method 4: Via WP-CLI
+
 ```bash
-wp plugin install site-optimizer --activate
+# Navigate to WordPress directory
+cd /path/to/wordpress
+
+# Clone the plugin
+cd wp-content/plugins/
+git clone https://github.com/GradusXaker/site-optimizer-pro.git site-optimizer
+
+# Activate the plugin
+wp plugin activate site-optimizer
 ```
+
+---
+
+## ✅ After Installation
+
+1. **Check Requirements:**
+   - Go to **Tools → Site Optimizer → Health**
+   - Verify all checks show green status
+
+2. **Configure Settings:**
+   - Go to **Tools → Site Optimizer → Settings**
+   - Adjust optimization preferences
+
+3. **Run First Optimization:**
+   - Click **"Optimize All Images"** for image optimization
+   - Click **"Full Cleanup"** for database optimization
+
+---
+
+## ⚠️ Troubleshooting
+
+### Plugin doesn't activate
+- Check PHP version (must be 7.2+)
+- Check WordPress version (must be 5.0+)
+- Verify GD extension is installed: `php -m | grep gd`
+
+### "Insufficient permissions" error
+- Ensure the plugin folder has correct permissions (755 for folders, 644 for files)
+- Check that `wp-content` is writable
+
+### Images not optimizing
+- Verify GD or Imagick extension is installed
+- Check upload directory permissions
+- Review error logs: `tail -f /var/log/php/error.log`
 
 ---
 
