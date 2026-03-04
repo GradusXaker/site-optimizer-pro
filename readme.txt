@@ -7,6 +7,12 @@
 
 Комплексное решение для оптимизации WordPress сайтов: сжатие изображений, оптимизация базы данных, мониторинг здоровья сайта.
 
+## 📥 Скачать
+
+- **GitHub:** https://github.com/GradusXaker/site-optimizer-pro
+- **Скачать ZIP:** https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
+- **WordPress.org:** Скоро
+
 ## 📋 Содержание
 
 - [Возможности](#возможности)

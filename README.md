@@ -7,6 +7,12 @@
 
 Comprehensive WordPress optimization solution: image compression, database optimization, site health monitoring.
 
+## 📥 Download
+
+- **GitHub:** https://github.com/GradusXaker/site-optimizer-pro
+- **Download ZIP:** https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
+- **WordPress.org:** Coming soon
+
 ## 📋 Table of Contents
 
 - [Features](#features)
