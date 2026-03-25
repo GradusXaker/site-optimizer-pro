@@ -1,422 +1,206 @@
 # Site Optimizer Pro
 
-**Version:** 1.1.0  
-**Requires WordPress:** 5.0+  
-**Requires PHP:** 7.2+  
-**License:** GPL v2 or later
+**Версия:** 1.1.0  
+**Требуется WordPress:** 5.0+  
+**Требуется PHP:** 7.2+  
+**Лицензия:** GPL v2 or later
 
-Comprehensive WordPress optimization solution: image compression, database optimization, site health monitoring.
+`Site Optimizer Pro` — это WordPress-плагин для оптимизации изображений, очистки базы данных и мониторинга состояния сайта.
 
-## 📥 Download
+## Скачать
 
 - **GitHub:** https://github.com/GradusXaker/site-optimizer-pro
-- **Download ZIP:** https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
-- **WordPress.org:** Coming soon
+- **ZIP-архив:** https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
+- **WordPress.org:** скоро
 
-## 📋 Table of Contents
+## Содержание
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Settings](#settings)
-- [Hooks and API](#hooks-and-api)
+- [Возможности](#возможности)
+- [Требования](#требования)
+- [Установка](#установка)
+- [Использование](#использование)
+- [Настройки](#настройки)
+- [Hooks и API](#hooks-и-api)
 - [FAQ](#faq)
-- [Support](#support)
+- [Поддержка](#поддержка)
 
 ---
 
-## ✨ Features
+## Возможности
 
-### 🖼️ Image Optimization
-- Automatic compression on upload
-- WebP conversion
-- Bulk optimization of existing images
-- Support for JPEG, PNG, GIF, WebP
-- PNG transparency preservation
-- All thumbnail sizes optimization
+### Оптимизация изображений
+- автоматическое сжатие при загрузке;
+- конвертация в `WebP`;
+- массовая оптимизация уже загруженных изображений;
+- поддержка `JPEG`, `PNG`, `GIF`, `WebP`;
+- сохранение прозрачности `PNG`;
+- оптимизация всех размеров миниатюр.
 
-### 🗄️ Database Optimization
-- Post revisions cleanup
-- Trash deletion
-- Transients cleanup
-- Spam comments removal
-- Orphaned metadata cleanup
-- MySQL table optimization
+### Оптимизация базы данных
+- очистка ревизий записей;
+- удаление содержимого корзины;
+- очистка `transients`;
+- удаление спам-комментариев;
+- очистка сиротских метаданных;
+- оптимизация таблиц `MySQL`.
 
-### 📊 Site Health Monitoring
-- PHP and WordPress version check
-- Memory usage monitoring
-- Disk space control
-- Security checks
-- Caching status
-- WP-Cron monitoring
+### Мониторинг здоровья сайта
+- проверка версий `PHP` и `WordPress`;
+- мониторинг использования памяти;
+- контроль свободного места на диске;
+- базовые проверки безопасности;
+- проверка статуса кеширования;
+- мониторинг `WP-Cron`.
 
-### ⚡ Automation
-- Daily automatic optimization
-- Weekly health checks
-- Critical issues notifications
-- Quick optimize from admin bar
-
----
-
-## 📦 Requirements
-
-### Minimum
-- WordPress 5.0 or higher
-- PHP 7.2 or higher
-- MySQL 5.6+ / MariaDB 10.1+
-- GD extension
-
-### Recommended
-- PHP 8.0+
-- Imagick extension (for better image optimization)
-- Redis or Memcached (for object caching)
-- Minimum 256MB memory
+### Автоматизация
+- ежедневная автоматическая оптимизация;
+- еженедельные health-check;
+- уведомления о критических проблемах;
+- быстрый запуск оптимизации из admin bar.
 
 ---
 
-## 🔧 Installation
+## Требования
 
-### Method 1: Install via ZIP (Recommended)
+### Минимальные
+- `WordPress 5.0` или выше;
+- `PHP 7.2` или выше;
+- `MySQL 5.6+` / `MariaDB 10.1+`;
+- расширение `GD`.
 
-1. **Download the plugin:**
-   - Click: https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
-   - Save the file to your computer
-
-2. **Upload to WordPress:**
-   - Log in to your WordPress admin panel
-   - Go to **Plugins → Add New Plugin**
-   - Click the **"Upload Plugin"** button at the top
-   - Click **"Choose File"** and select the downloaded ZIP file
-   - Click **"Install Now"**
-
-3. **Activate:**
-   - After installation, click **"Activate Plugin"**
-   - The plugin is now ready to use!
+### Рекомендуемые
+- `PHP 8.0+`;
+- расширение `Imagick` для более качественной оптимизации;
+- `Redis` или `Memcached` для object caching;
+- не менее `256MB` памяти.
 
 ---
 
-### Method 2: Install via Git
+## Установка
 
-1. **Connect to your server via SSH**
+### Способ 1: установка через ZIP
 
-2. **Navigate to plugins directory:**
-   ```bash
-   cd /path/to/your/wordpress/wp-content/plugins/
-   ```
+1. Скачайте архив:
+   - https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
+2. Войдите в админ-панель WordPress.
+3. Перейдите в **Plugins -> Add New Plugin**.
+4. Нажмите **Upload Plugin**.
+5. Выберите ZIP-файл и нажмите **Install Now**.
+6. После установки нажмите **Activate Plugin**.
 
-3. **Clone the repository:**
-   ```bash
-   git clone https://github.com/GradusXaker/site-optimizer-pro.git site-optimizer
-   ```
-
-4. **Activate in WordPress:**
-   - Go to **Plugins** in WordPress admin
-   - Find **"Site Optimizer Pro"** in the list
-   - Click **"Activate"**
-
----
-
-### Method 3: Manual Installation (FTP)
-
-1. **Download the plugin:**
-   - Download: https://github.com/GradusXaker/site-optimizer-pro/archive/refs/heads/main.zip
-   - Extract the ZIP file on your computer
-   - You'll get a folder named `site-optimizer-pro-main`
-   - Rename it to `site-optimizer`
-
-2. **Upload via FTP:**
-   - Connect to your server using FTP client (FileZilla, Cyberduck, etc.)
-   - Navigate to `/wp-content/plugins/` directory
-   - Upload the `site-optimizer` folder
-
-3. **Activate:**
-   - Go to **Plugins** in WordPress admin
-   - Find **"Site Optimizer Pro"**
-   - Click **"Activate"**
-
----
-
-### Method 4: Via WP-CLI
+### Способ 2: установка через Git
 
 ```bash
-# Navigate to WordPress directory
-cd /path/to/wordpress
+cd /path/to/your/wordpress/wp-content/plugins/
+git clone https://github.com/GradusXaker/site-optimizer-pro.git site-optimizer
+```
 
-# Clone the plugin
+После этого активируйте плагин в админ-панели WordPress.
+
+### Способ 3: ручная установка через FTP
+
+1. Скачайте ZIP-файл репозитория.
+2. Распакуйте архив.
+3. Переименуйте папку `site-optimizer-pro-main` в `site-optimizer`.
+4. Загрузите ее в `/wp-content/plugins/`.
+5. Активируйте плагин в WordPress.
+
+### Способ 4: через `WP-CLI`
+
+```bash
+cd /path/to/wordpress
 cd wp-content/plugins/
 git clone https://github.com/GradusXaker/site-optimizer-pro.git site-optimizer
-
-# Activate the plugin
 wp plugin activate site-optimizer
 ```
 
 ---
 
-## ✅ After Installation
+## Что сделать после установки
 
-1. **Check Requirements:**
-   - Go to **Tools → Site Optimizer → Health**
-   - Verify all checks show green status
-
-2. **Configure Settings:**
-   - Go to **Tools → Site Optimizer → Settings**
-   - Adjust optimization preferences
-
-3. **Run First Optimization:**
-   - Click **"Optimize All Images"** for image optimization
-   - Click **"Full Cleanup"** for database optimization
+1. Перейдите в **Tools -> Site Optimizer -> Health** и проверьте, что базовые проверки проходят успешно.
+2. Откройте **Tools -> Site Optimizer -> Settings** и настройте параметры оптимизации.
+3. Выполните первый запуск:
+   - **Optimize All Images** — для изображений;
+   - **Full Cleanup** — для очистки базы данных.
 
 ---
 
-## ⚠️ Troubleshooting
+## Использование
 
-### Plugin doesn't activate
-- Check PHP version (must be 7.2+)
-- Check WordPress version (must be 5.0+)
-- Verify GD extension is installed: `php -m | grep gd`
+### Быстрый старт
 
-### "Insufficient permissions" error
-- Ensure the plugin folder has correct permissions (755 for folders, 644 for files)
-- Check that `wp-content` is writable
+1. Откройте **Tools -> Site Optimizer**.
+2. Посмотрите состояние сайта на вкладке **Health**.
+3. Запустите оптимизацию изображений.
+4. Выполните очистку базы данных.
 
-### Images not optimizing
-- Verify GD or Imagick extension is installed
-- Check upload directory permissions
-- Review error logs: `tail -f /var/log/php/error.log`
+### Оптимизация изображений
 
----
+- **Автоматическая:** изображения обрабатываются при загрузке в медиатеку.
+- **Массовая:** откройте **Tools -> Site Optimizer -> Images** и нажмите **Optimize All Images**.
+- **WebP:** версии `WebP` создаются автоматически для оптимизированных изображений.
 
-## 📖 Usage
+### Оптимизация базы данных
 
-### Quick Start
+1. Перейдите в **Tools -> Site Optimizer -> Database**.
+2. Выберите тип очистки или нажмите **Full Cleanup**.
+3. Подтвердите выполнение.
 
-1. After activation, go to **Tools → Site Optimizer**
-2. Check site status on **Health** tab
-3. Run image optimization
-4. Perform database cleanup
+> Перед оптимизацией базы данных рекомендуется сделать резервную копию.
 
-### Image Optimization
+### Мониторинг здоровья сайта
 
-#### Automatic Optimization
-Images are optimized automatically on upload via media library.
-
-#### Bulk Optimization
-1. Go to **Tools → Site Optimizer → Images**
-2. Click **Optimize All Images**
-3. Wait for the process to complete
-
-#### WebP Creation
-WebP versions are created automatically for all optimized images.
-
-### Database Optimization
-
-1. Go to **Tools → Site Optimizer → Database**
-2. Select cleanup type or click **Full Cleanup**
-3. Confirm the action
-
-> ⚠️ **Warning:** Backup your database before optimization!
-
-### Health Monitoring
-
-1. Go to **Tools → Site Optimizer → Health**
-2. Review all components status
-3. Fix any found issues
+1. Откройте **Tools -> Site Optimizer -> Health**.
+2. Проверьте статусы компонентов.
+3. Исправьте найденные проблемы при необходимости.
 
 ---
 
-## ⚙️ Settings
+## Настройки
 
-The plugin uses the following options (stored in `wp_options`):
+Плагин хранит основные параметры в `wp_options`.
 
-### so_settings
-```php
-array(
-    'enable_image_optimization' => true,     // Enable image optimization
-    'enable_webp' => true,                   // Enable WebP creation
-    'enable_database_cleanup' => true,       // Enable DB cleanup
-    'enable_cron' => true,                   // Enable Cron tasks
-    'image_quality' => 85,                   // Compression quality (1-100)
-    'auto_optimize_on_upload' => true        // Auto-optimize on upload
-)
-```
+Типовые настройки включают:
+- включение/отключение оптимизации изображений;
+- включение `WebP`;
+- расписание автоматических задач;
+- ограничения и параметры очистки;
+- поведение health-check модулей.
 
-### so_stats
-```php
-array(
-    'images_optimized' => 0,      // Total images optimized
-    'space_saved' => 0,           // Space saved (bytes)
-    'optimizations_run' => 0,     // Number of optimization runs
-    'db_optimizations' => 0,      // Number of DB optimizations
-    'last_optimization' => 0,     // Last optimization timestamp
-    'last_health_check' => 0      // Last health check timestamp
-)
-```
+Если нужно детально изучить внутренние опции, смотри код плагина и зарегистрированные настройки в админской части.
 
 ---
 
-## 🎯 Hooks and API
+## Hooks и API
 
-### Cron Hooks
-```php
-// Daily optimization
-add_action('so_daily_optimization', 'your_function');
+Репозиторий содержит внутренние хуки и точки расширения для интеграции с WordPress-окружением.
 
-// Weekly health check
-add_action('so_weekly_health_check', 'your_function');
-```
-
-### AJAX Actions
-```php
-// Image optimization
-do_action('wp_ajax_so_optimize_images');
-
-// Database optimization
-do_action('wp_ajax_so_optimize_database');
-
-// Get health status
-do_action('wp_ajax_so_get_health_status');
-
-// Purge transients
-do_action('wp_ajax_so_purge_transients');
-
-// Quick optimize
-do_action('wp_ajax_so_quick_optimize');
-```
-
-### Class Methods
-
-```php
-// Image Optimization
-SO_Image_Optimizer::optimize_all_images();
-SO_Image_Optimizer::optimize_image($file_path);
-SO_Image_Optimizer::create_webp($file_path);
-SO_Image_Optimizer::get_stats();
-
-// Database
-SO_Database_Optimizer::full_cleanup();
-SO_Database_Optimizer::optimize_tables();
-SO_Database_Optimizer::clean_post_revisions();
-SO_Database_Optimizer::clean_trash();
-SO_Database_Optimizer::clean_transients();
-SO_Database_Optimizer::get_stats();
-
-// Site Health
-SO_Site_Health::get_full_status();
-SO_Site_Health::check_php_version();
-SO_Site_Health::check_memory_usage();
-SO_Site_Health::check_disk_space();
-```
+Если планируется доработка под конкретный сайт, ориентируйтесь на:
+- WordPress actions/filters внутри плагина;
+- админские экраны и сервисы оптимизации;
+- код обработки изображений, базы данных и health-check логики.
 
 ---
 
-## ❓ FAQ
+## FAQ
 
-### Is it safe to delete post revisions?
-Yes, revisions are only for change history. It's recommended to keep the last 3-5 revisions.
+### Плагин не активируется
+- Проверьте версию `PHP` — нужна `7.2+`.
+- Проверьте версию `WordPress` — нужна `5.0+`.
+- Убедитесь, что установлено расширение `GD`.
 
-### Can I disable WebP creation?
-Yes, via filter:
-```php
-add_filter('so_enable_webp', '__return_false');
-```
+### Ошибка прав доступа
+- Проверьте права на каталоги и файлы (`755` для папок, `644` для файлов).
+- Убедитесь, что каталог `wp-content` доступен для записи.
 
-### How to exclude certain images from optimization?
-Use filter:
-```php
-add_filter('so_skip_image_optimization', function($skip, $attachment_id) {
-    $meta = wp_get_attachment_metadata($attachment_id);
-    return ($meta['filesize'] < 10240); // Skip files < 10KB
-}, 10, 2);
-```
-
-### Does the plugin slow down image loading?
-No, optimization happens on upload. Optimized images load faster.
-
-### How often to run database optimization?
-Recommended: weekly for active sites, monthly for low-activity sites.
+### Изображения не оптимизируются
+- Проверьте, установлены ли `GD` или `Imagick`.
+- Проверьте права на каталог загрузок.
+- Посмотрите логи `PHP`.
 
 ---
 
-## 🐛 Troubleshooting
+## Поддержка
 
-### "Not enough memory" error
-Increase memory limit in `wp-config.php`:
-```php
-define('WP_MEMORY_LIMIT', '256M');
-```
-
-### WebP files not created
-Check for GD extension with WebP support:
-```php
-var_dump(function_exists('imagewebp'));
-```
-
-### Database optimization error
-Check MySQL user permissions for `OPTIMIZE TABLE`.
-
----
-
-## 📝 Changelog
-
-### 1.1.0
-- ✅ Added minimum PHP and WordPress version checks
-- ✅ Added uninstall.php for clean removal
-- ✅ Improved error handling
-- ✅ Added localization (Russian/English)
-- ✅ Added admin bar menu
-- ✅ Removed duplicate wp-optimizer plugin
-
-### 1.0.0
-- Initial release
-
----
-
-## 📧 Support
-
-If you have questions or issues:
-1. Check the documentation
-2. Enable WordPress debug mode
-3. Check PHP error logs
-
----
-
-## 📄 License
-
-GPL v2 or later
-
----
-
-## 👨‍💻 For Developers
-
-### Plugin Structure
-```
-site-optimizer/
-├── site-optimizer.php      # Main plugin file
-├── uninstall.php           # Uninstall script
-├── admin/
-│   ├── class-admin-page.php
-│   ├── style.css
-│   └── script.js
-├── includes/
-│   ├── class-image-optimizer.php
-│   ├── class-database-optimizer.php
-│   ├── class-site-health.php
-│   └── class-theme-integration.php
-└── languages/              # Translation files
-```
-
-### Adding Localization
-```php
-__('Text to translate', 'site-optimizer')
-```
-
-### Testing
-```bash
-# Check code against WordPress standards
-phpcs --standard=WordPress site-optimizer/
-
-# Run tests
-phpunit
-```
+Если вы используете репозиторий как основу для своего проекта, удобнее всего вести доработки и обсуждение прямо через GitHub Issues и собственные ветки/форки.
