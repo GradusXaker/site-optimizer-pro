@@ -1,4 +1,6 @@
 <div align="center">
+  <img src="./banner.svg" alt="site-optimizer-pro banner" width="100%" />
+
   <h1>Site Optimizer Pro</h1>
   <p><strong>Кибер-оптимизатор для WordPress.</strong> Плагин для изображений, базы данных и health-check мониторинга сайта.</p>
 
