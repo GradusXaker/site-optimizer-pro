@@ -1,11 +1,24 @@
-# Site Optimizer Pro
+<div align="center">
+  <h1>Site Optimizer Pro</h1>
+  <p><strong>Кибер-оптимизатор для WordPress.</strong> Плагин для изображений, базы данных и health-check мониторинга сайта.</p>
 
-**Версия:** 1.1.0  
-**Требуется WordPress:** 5.0+  
-**Требуется PHP:** 7.2+  
-**Лицензия:** GPL v2 or later
+  <p>
+    <img src="https://img.shields.io/badge/WordPress-plugin-111827?style=for-the-badge&logo=wordpress&logoColor=22C55E" alt="WordPress plugin" />
+    <img src="https://img.shields.io/badge/PHP-7.2%2B-111827?style=for-the-badge&logo=php&logoColor=22C55E" alt="PHP 7.2+" />
+    <img src="https://img.shields.io/badge/Image-optimization-111827?style=for-the-badge&logoColor=22C55E" alt="Image optimization" />
+    <img src="https://img.shields.io/badge/version-1.1.0-22C55E?style=for-the-badge&labelColor=0B1220" alt="Version" />
+  </p>
+</div>
 
-`Site Optimizer Pro` — это WordPress-плагин для оптимизации изображений, очистки базы данных и мониторинга состояния сайта.
+```text
+> plugin: site-optimizer-pro
+> tasks: images + database + site health
+> target: faster and cleaner WordPress installations
+```
+
+## обзор
+
+`Site Optimizer Pro` объединяет типовые задачи обслуживания WordPress-сайта в одном месте: оптимизацию изображений, уборку базы данных и регулярную проверку критичных параметров среды.
 
 ## Скачать
 
