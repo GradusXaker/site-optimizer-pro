@@ -1,6 +1,13 @@
-# Site Optimizer Pro + Hacker Theme - Integration Complete
+# Интеграция Site Optimizer Pro + Hacker Theme
 
-## Что было сделано / What Was Done
+```text
+> repo: site-optimizer-pro
+> doc: INTEGRATION
+> purpose: Интеграция плагина Site Optimizer Pro с темой Hacker
+```
+
+
+## что было сделано
 
 ### 1. Плагин Site Optimizer Pro (Версия 1.0.0)
 
@@ -97,7 +104,7 @@
 - ⚙️ Ссылка на панель управления
 - ⚡ Быстрая оптимизация
 
-## Структура файлов / File Structure
+## структура файлов
 
 ```
 wordpress-site/
@@ -126,7 +133,7 @@ wordpress-site/
 │               └── site-health.php (НОВЫЙ)
 ```
 
-## Как использовать / How to Use
+## как использовать
 
 ### 1. Активация плагина
 1. Зайдите в WordPress Admin
@@ -155,7 +162,7 @@ wordpress-site/
 ### 5. Shortcodes
 Вставьте shortcodes в любые записи/страницы для отображения статуса
 
-## Автоматические функции / Automatic Features
+## автоматические функции
 
 ### При загрузке изображений:
 - Автоматическое сжатие
@@ -172,7 +179,7 @@ wordpress-site/
 - Admin bar меню
 - Быстрая оптимизация в 1 клик
 
-## Проверка работоспособности / Verification
+## проверка работоспособности
 
 Все PHP файлы прошли проверку синтаксиса:
 ✅ site-optimizer.php
@@ -185,7 +192,7 @@ wordpress-site/
 ✅ footer.php (theme)
 ✅ site-health.php (template part)
 
-## Требования / Requirements
+## требования
 
 - WordPress 5.0+
 - PHP 7.0+ (рекомендуется 7.4+)
@@ -193,7 +200,7 @@ wordpress-site/
 - MySQL 5.6+
 - Тема Hacker (или совместимая)
 
-## Следующие шаги / Next Steps
+## следующие шаги
 
 1. Активируйте плагин в WordPress
 2. Проверьте панель управления
@@ -201,7 +208,7 @@ wordpress-site/
 4. Добавьте виджет в sidebar
 5. Настройте параметры по желанию
 
-## Поддержка / Support
+## поддержка
 
 При возникновении проблем:
 1. Проверьте требования PHP
